@@ -1,0 +1,93 @@
+{
+  "seed": 20261028,
+  "catalog_seed": 620281,
+  "warp_weights": [
+    1,
+    3,
+    5,
+    7
+  ],
+  "coefficients": [
+    -8,
+    -7,
+    -6,
+    -5,
+    -4,
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "max_terms": 12,
+  "search": {
+    "steps": 9000,
+    "batch_size": 64,
+    "hidden": 512,
+    "embedding": 128,
+    "learning_rate": 0.0005,
+    "log_every": 200,
+    "complexity": 0.001,
+    "reward_scale": 15.0,
+    "success_tol": 1e-08,
+    "variance_start": 1e-05,
+    "variance_end": 0.01,
+    "variance_ramp_steps": 6000,
+    "support_weight": 0.001,
+    "control_entropy_weight": 0.1,
+    "control_pg_weight": 0.1,
+    "replay_weight": 0.1,
+    "stop_on_success": false,
+    "device": "cpu",
+    "threads": 1,
+    "minimum_support_weight": 1.0,
+    "focus_steps": 1500,
+    "integer_prior": 0.25,
+    "integer_penalty": 0.05,
+    "mean_l1_weight": 0.01,
+    "control_guide_weight": 0.1
+  },
+  "data": {
+    "seed": 420287,
+    "backgrounds": {
+      "train": 12,
+      "validation": 3,
+      "test_iid": 3,
+      "test_ood": 3,
+      "test_modes": 3
+    },
+    "train_mode_max": 7,
+    "test_mode_max": 10,
+    "order": 320,
+    "tol": 2e-09,
+    "train_ranges": {
+      "q": [
+        0.2,
+        3.0
+      ],
+      "bulk": [
+        0.5,
+        8.0
+      ]
+    },
+    "ood_ranges": {
+      "q": [
+        3.5,
+        5.0
+      ],
+      "bulk": [
+        9.0,
+        12.0
+      ]
+    },
+    "points": 6,
+    "tuples_per_background": 24
+  },
+  "points": 6
+}
